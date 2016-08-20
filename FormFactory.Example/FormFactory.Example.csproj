@@ -123,7 +123,7 @@
   <ItemGroup>
     <Compile Include="App_Start\PrecompiledMvcViewEngineStart.cs" />
     <Compile Include="Controllers\UploadedFilesController.cs" />
-    <Compile Include="Models\Examples\BootstrapComponents.cs" />
+    <Compile Include="Models\Examples\BootstrapComponentsExample.cs" />
     <Compile Include="Models\Examples\DateTimePickersExample.cs" />
     <Compile Include="Models\Examples\AutoCompleteExample.cs" />
     <Compile Include="Models\Examples\ChoicesExample.cs" />

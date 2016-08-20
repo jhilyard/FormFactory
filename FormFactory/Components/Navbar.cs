@@ -26,12 +26,10 @@ namespace FormFactory.Components
                     Uri = new Uri("/", UriKind.Relative)
                 }
             };
-            Components = new List<NavbarComponent>();
-
         }
 
         public NavbarHeader Header { get; set; }
-        public List<NavbarComponent> Components { get; set; }
+        public List<NavbarComponent> Components { get; set; } = new List<NavbarComponent>();
 
         public class NavbarHeader
         {
@@ -55,7 +53,7 @@ namespace FormFactory.Components
                     get { return _form; }
                     set
                     {
-                        _form.AdditionalClasses = "navbar-form";
+                        value.AdditionalClasses = "navbar-form";
                         _form = value;
                     }
                 }
@@ -63,7 +61,7 @@ namespace FormFactory.Components
 
             public class Nav : NavbarComponent
             {
-                public IList<NavbarNavItem> Items { get; set; }
+                public IList<NavbarNavItem> Items { get; set; } = new List<NavbarNavItem>();
 
                 public abstract class NavbarNavItem
                 {
@@ -79,7 +77,7 @@ namespace FormFactory.Components
                 public class Dropdown : NavbarNavItem
                 {
                     public string Text { get; set; }
-                    public IList<NavbarNavDropdownItem> Items { get; private set; }
+                    public IList<NavbarNavDropdownItem> Items { get; private set; } = new List<NavbarNavDropdownItem>();
 
                     public abstract class NavbarNavDropdownItem
                     {
@@ -119,7 +117,4 @@ namespace FormFactory.Components
     }
 
   
-}
-namespace FormFactory.Components
-{
 }

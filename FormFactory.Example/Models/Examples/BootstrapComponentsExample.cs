@@ -7,7 +7,7 @@ using FormFactory.Components;
 
 namespace FormFactory.Example.Models.Examples
 {
-    public class BootstrapComponents
+    public class BootstrapComponentsExample
     {
         public Navbar Navbar { get; set; } = new Navbar()
         {
@@ -20,7 +20,7 @@ namespace FormFactory.Example.Models.Examples
                         new Navbar.NavbarComponent.Nav.Link()
                         {
                             Text = "Some link",
-                            Uri = new Uri("/somelink"),
+                            Uri = new Uri("/somelink", UriKind.Relative),
                             Active = true
                         },
                         new Navbar.NavbarComponent.Nav.Dropdown("A Dropdown")
